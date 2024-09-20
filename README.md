@@ -11,6 +11,8 @@ To find the best model, we will standardise the features and use Gaussian Multip
 
 &#8721;<sub>j=1</sub><sup>n</sup> X<sub>ij</sub>β<sub>j</sub>
 
+∑(j=1 to n) X<sub>ij</sub>β<sub>j</sub>
+
 With Likelihood of Y<sub>i</sub> ~ 𝑁𝑜𝑟𝑚𝑎𝑙(α + ..., σ<sup>2</sup>), where X<sub>ij</sub> being the value of each feature for 𝑗=1 each iteration of 𝑖 with Priors α ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), β<sub>j</sub> ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), and σ<sup>2</sup> ~ 𝐼𝑛𝑣𝐺𝑎𝑚𝑚𝑎(0. 1, 0. 1) and 𝑛 being the number of features.
 
 Model 1 : In the 1st model, we will use Gaussian Multiple Linear Regression as stated with all of the features of the dataset.
