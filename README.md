@@ -40,6 +40,7 @@ All models will be fitted using the JAGS package in R. For building all of the m
 The model performances are compared using the Deviance Information Criterion (DIC) and the Watanabe-Akaike Information Criterion (WAIC). The comparisons of the four models based on these criteria are summarized in Table 3. Among the four models, the one with the lowest DIC and WAIC is Model 4. Therefore, we will use Model 4 to predict house prices in this project.
 
 **Table 3 - Model comparisons**
+
 <img width="509" alt="image" src="https://github.com/user-attachments/assets/65296983-4f81-46c7-8033-63ebd4222cef">
 
 
@@ -83,4 +84,5 @@ Applying Model 4, the posteriors of the parameters are summarized in Table 4. Al
 Thus, we can conclude that the price of a house mainly increased based on several key factors, including the presence of a yard, the number of floors, the city code indicating location, the year the house was made, the house being newly built, the spaciousness of the basement, the size of the attic area, and the size of the garage.
 
 **Table 4 - Summary of the posteriors**
+
 <img width="387" alt="image" src="https://github.com/user-attachments/assets/367d886e-e985-432f-9faa-db3b7a817c72">
