@@ -8,6 +8,9 @@ The prices of houses in Paris, along with relevant information for each, are ava
 To find the best model, we will standardise the features and use Gaussian Multiple Linear Regression as stated with the assumption of normality of the data. The alpha is the intercept when there isn’t any features data. Beta is the slope of each feature which is then added all together.
 
 ![Gaussian Multiple Linear Regression Formula]<img width="153" alt="image" src="https://github.com/user-attachments/assets/cd61a7cd-ef19-46de-b3de-98ddd89dc619">
-With Likelihood of 𝑌_𝑖~𝑁𝑜𝑟𝑚𝑎𝑙(α + ∑ 𝑋𝑖𝑗β𝑗, σ2), where 𝑋𝑖𝑗 being the value of each feature for 𝑗=1
-each iteration of 𝑖 with Priors α ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), β𝑗 ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), and σ2~𝐼𝑛𝑣𝐺𝑎𝑚𝑚𝑎(0. 1, 0. 1) and 𝑛 being the number of features.
+
+With Likelihood of <img width="313" alt="image" src="https://github.com/user-attachments/assets/b246a07f-2853-48b0-8f5e-08f0727afb41">, where X<sub>ij</sub> being the value of each feature for 𝑗=1 each iteration of 𝑖 with Priors α ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), β<sub>j</sub> ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), and 
+
+
+
 
