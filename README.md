@@ -7,10 +7,21 @@ The prices of houses in Paris, along with relevant information for each, are ava
 2. MODELS
 To find the best model, we will standardise the features and use Gaussian Multiple Linear Regression as stated with the assumption of normality of the data. The alpha is the intercept when there isn’t any features data. Beta is the slope of each feature which is then added all together.
 
-![Gaussian Multiple Linear Regression Formula]<img width="153" alt="image" src="https://github.com/user-attachments/assets/cd61a7cd-ef19-46de-b3de-98ddd89dc619">
+<img width="153" alt="image" src="https://github.com/user-attachments/assets/cd61a7cd-ef19-46de-b3de-98ddd89dc619">
 
-With Likelihood of <img width="313" alt="image" src="https://github.com/user-attachments/assets/b246a07f-2853-48b0-8f5e-08f0727afb41">, where X<sub>ij</sub> being the value of each feature for 𝑗=1 each iteration of 𝑖 with Priors α ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), β<sub>j</sub> ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), and 
+&#8721;<sub>j=1</sub><sup>n</sup> X<sub>ij</sub>β<sub>j</sub>
 
+With Likelihood of Y<sub>i</sub> ~ 𝑁𝑜𝑟𝑚𝑎𝑙(α + ..., σ<sup>2</sup>), where X<sub>ij</sub> being the value of each feature for 𝑗=1 each iteration of 𝑖 with Priors α ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), β<sub>j</sub> ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), and σ<sup>2</sup> ~ 𝐼𝑛𝑣𝐺𝑎𝑚𝑚𝑎(0. 1, 0. 1) and 𝑛 being the number of features.
+
+Model 1 : In the 1st model, we will use Gaussian Multiple Linear Regression as stated with all of the features of the dataset.
+Model 2 : In the 2nd model, we will use Gaussian Multiple Linear Regression as stated, but only using the features with strong correlations with the target feature based on the frequentist linear regression model found in Table 1.1 The indication of strong correlation here is taken from features with 3 significance stars.
+Model 3 : In the 3rd model, we will utilize the features used in the 2nd model. However, the initial values for alpha and beta coefficients will be taken from the estimates of the frequentist linear model found in Table 2.
+Model 4 : In the 4th model, the slope is still a fixed effect but the intercept will be treated as a mixed effect with random effect for the price. The Gaussian Linear Regression Model is :
+
+<img width="239" alt="image" src="https://github.com/user-attachments/assets/5b24b546-8b92-42b0-a447-a0a4898886e8">
+
+With Likelihood of 𝑌𝑖~𝑁𝑜𝑟𝑚𝑎𝑙(α + 𝜃𝑒𝑖 + ∑ 𝑋𝑖𝑗β𝑗, σ2), where 𝑋𝑖𝑗 being the value of each feature 𝑗=1
+for each iteration of 𝑖 with Priors α ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), and σ2~𝐼𝑛𝑣𝐺𝑎𝑚𝑚𝑎(0. 1, 0. 1) and double-exponential random effect 𝜃𝑒𝑖~𝐷𝐸(0, σ2 ) and 𝑛 being the number of features.
 
 
 
