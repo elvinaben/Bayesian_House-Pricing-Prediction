@@ -8,16 +8,19 @@ The prices of houses in Paris, along with relevant information for each, are ava
 
 **2. MODELS**
 
-To find the best model, we will standardise the features and use Gaussian Multiple Linear Regression as stated with the assumption of normality of the data. The alpha is the intercept when there isn’t any features data. Beta is the slope of each feature which is then added all together.
+To find the best model, the features will be standardized, and Gaussian Multiple Linear Regression will be employed under the assumption of data normality. The intercept, denoted as alpha, represents the value when no feature data is present, while beta signifies the slope of each feature, which is then summed together.
 
 <img width="153" alt="image" src="https://github.com/user-attachments/assets/cd61a7cd-ef19-46de-b3de-98ddd89dc619">
 
 With Likelihood of Y<sub>i</sub> ~ 𝑁𝑜𝑟𝑚𝑎𝑙(α + &#8721;<sub>j=1</sub><sup>n</sup> 𝑋<sub>ij</sub>β<sub>j</sub>, σ<sup>2</sup>), where 𝑋<sub>ij</sub> being the value of each feature for 𝑗=1 each iteration of 𝑖 with Priors α ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), β<sub>j</sub> ~ 𝑁𝑜𝑟𝑚𝑎𝑙(0, 1000), and σ<sup>2</sup> ~ 𝐼𝑛𝑣𝐺𝑎𝑚𝑚𝑎(0. 1, 0. 1) and 𝑛 being the number of features.
 
-Model 1 : In the 1st model, we will use Gaussian Multiple Linear Regression as stated with all of the features of the dataset.
-Model 2 : In the 2nd model, we will use Gaussian Multiple Linear Regression as stated, but only using the features with strong correlations with the target feature based on the frequentist linear regression model found in Table 1.1 The indication of strong correlation here is taken from features with 3 significance stars.
-Model 3 : In the 3rd model, we will utilize the features used in the 2nd model. However, the initial values for alpha and beta coefficients will be taken from the estimates of the frequentist linear model found in Table 2.
-Model 4 : In the 4th model, the slope is still a fixed effect but the intercept will be treated as a mixed effect with random effect for the price. The Gaussian Linear Regression Model is :
+Model 1: The first model employs Gaussian Multiple Linear Regression using all features of the dataset.
+
+Model 2: The second model utilizes Gaussian Multiple Linear Regression but only incorporates features with strong correlations to the target variable, based on the frequentist linear regression model in Table 1.1. Strong correlation is indicated by features with three significance stars.
+
+Model 3: The third model uses the features from the second model, with initial values for the alpha and beta coefficients derived from the estimates of the frequentist linear model presented in Table 2.
+
+Model 4: The fourth model maintains a fixed effect for the slope, while the intercept is treated as a mixed effect with a random effect for the price.
 
 <img width="239" alt="image" src="https://github.com/user-attachments/assets/5b24b546-8b92-42b0-a447-a0a4898886e8">
 
